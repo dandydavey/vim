@@ -67,6 +67,13 @@ set undofile
 set undolevels=1000 "maximum number of changes that can be undone
 set undoreload=10000 "maximum number lines to save for undo on a buffer reload
 
+" Add fzf to path
+set rtp+=/usr/local/opt/fzf
+" Use fzf as a file finder (perhaps can replace ctrl-p)
+map <C-F> :FZF<CR>
+" Per-command history
+let g:fzf_history_dir = '~/.local/share/fzf-history'
+
 " --- Appearance ---
 " Highlight cursor
 au WinLeave * set nocursorline nocursorcolumn
