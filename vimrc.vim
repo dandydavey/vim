@@ -118,6 +118,8 @@ syntax enable
 set background=dark
 colorscheme mustang
 
+" Map something for redraw, since <C-L> is overridden for TmuxNavigateRight
+map <C-/> :redraw!<CR>
 
 " Hybrid numbering
 set nu rnu
